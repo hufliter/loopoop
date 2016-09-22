@@ -1,0 +1,25 @@
+{
+  "apps": [{
+    "name":"loopoop-loopback",
+    "node_args": [ "--harmony" ],
+    "watch":"common",
+    "script": ".",
+    "env": {
+      "NODE_ENV": "local"
+    },
+    "env_development": {
+      "NODE_ENV": "development"
+    },
+    "env_production": {
+        "NODE_ENV": "production"
+    },
+    "error_file":
+      (process.env.app_home ? process.env.app_home : '.') 
+      +"/log/loopoop-loopback-error.log",
+    "out_file": 
+      (process.env.app_home ? process.env.app_home : '.') 
+      +"/log/loopoop-loopback-out.log",
+    "merge_logs"      : true,
+    "log_date_format" : "YYYY-MM-DD HH:mm.ss.SSS,Z"
+  }]
+}
